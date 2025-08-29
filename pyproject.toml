@@ -1,3 +1,49 @@
+[project]
+name = "scgpt-train"
+version = "0.1.0"
+description = "Training scGPT models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # pytorch
+    "torch>=2.5.0",
+    "torchvision>=0.20.0",
+    "lightning>=2.4.0",
+    "torchmetrics>=1.5.0",
+    # hydra
+    "hydra-core>=1.3.2",
+    "hydra-colorlog>=1.2.0",
+    "hydra-optuna-sweeper>=1.2.0",
+    # loggers
+    "wandb>=0.18.0",
+    # others
+    "pyrootutils>=1.0.4",
+    "pre-commit>=4.0.0",
+    "rich>=13.9.0",
+    "pytest>=8.3.0",
+    "sh>=2.1.0; platform_system != 'Windows'",
+    "omegaconf>=2.3.0",
+    "tqdm>=4.67.0",
+    "tensorflow>=2.18.0",
+    "pynvml>=12.0.0",
+    # data
+    "numpy>=2.0.0",
+    "Pillow>=11.0.0",
+    "opencv-python-headless>=4.10.0",
+    "albumentations>=1.4.0",
+    "h5py>=3.12.0",
+    # models
+    "timm>=1.0.0",
+    "segmentation-models-pytorch>=0.3.4",
+    # visualization
+    "seaborn>=0.13.0",
+    "scikit-learn>=1.5.0",
+    "matplotlib>=3.9.0",
+    "ipython>=8.28.0",
+    "grad-cam>=1.5.0",
+    "ttach>=0.0.3",
+]
+
 [tool.pytest.ini_options]
 addopts = [
   "--color=yes",

@@ -3,7 +3,7 @@ from typing import Any
 import hydra
 import torch
 from omegaconf import DictConfig
-from pytorch_lightning import LightningModule
+from lightning.pytorch import LightningModule
 
 
 class BaseLitModule(LightningModule):
@@ -23,8 +23,8 @@ class BaseLitModule(LightningModule):
             optimizer (DictConfig): Optimizer config.
             scheduler (DictConfig): Scheduler config.
             logging (DictConfig): Logging config.
-            args (Any): Additional arguments for pytorch_lightning.LightningModule.
-            kwargs (Any): Additional keyword arguments for pytorch_lightning.LightningModule.
+            args (Any): Additional arguments for lightning.pytorch.LightningModule.
+            kwargs (Any): Additional keyword arguments for lightning.pytorch.LightningModule.
         """
 
         super().__init__(*args, **kwargs)

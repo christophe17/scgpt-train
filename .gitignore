@@ -153,3 +153,7 @@ dmypy.json
 configs/local/default.yaml
 .env
 .autoenv
+
+# Data and logs folders
+data/
+logs/

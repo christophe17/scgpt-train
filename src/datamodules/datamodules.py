@@ -3,7 +3,7 @@ from typing import Dict, List, Optional, Union
 
 import hydra
 from omegaconf import DictConfig
-from pytorch_lightning import LightningDataModule
+from lightning.pytorch import LightningDataModule
 from torch.utils.data import DataLoader, Dataset
 
 from src.datamodules.components.transforms import TransformsWrapper

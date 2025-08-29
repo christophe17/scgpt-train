@@ -3,13 +3,13 @@ from typing import List, Tuple
 import hydra
 import pyrootutils
 from omegaconf import DictConfig
-from pytorch_lightning import (
+from lightning.pytorch import (
     LightningDataModule,
     LightningModule,
     Trainer,
     seed_everything,
 )
-from pytorch_lightning.loggers import LightningLoggerBase
+from lightning.pytorch.loggers import Logger
 
 from src import utils
 
@@ -92,7 +92,7 @@ def evaluate(cfg: DictConfig) -> Tuple[dict, dict]:
     )
 
     log.info("Instantiating loggers...")
-    logger: List[LightningLoggerBase] = utils.instantiate_loggers(
+    logger: List[Logger] = utils.instantiate_loggers(
         cfg.get("logger")
     )
 

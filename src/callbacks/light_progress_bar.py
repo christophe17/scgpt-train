@@ -5,7 +5,7 @@ import os
 import time
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
-from pytorch_lightning.callbacks import ProgressBarBase
+from lightning.pytorch.callbacks import ProgressBarBase
 
 
 def n_lines(text: str) -> int:
